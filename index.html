@@ -23,7 +23,7 @@
         </nav>
     </header>
 
-    <section>
+    <section class="full-width">
         <div class="content-news">
             <div class="card">
                 <a href="#"><img src="./images/content1.webp" alt="banner" loading="lazy"></a>
@@ -37,14 +37,18 @@
                 <a href="#"><img src="./images/content3.webp" alt="banner" loading="lazy"></a>
                 <h3><a href="#">Maher não segura a língua! Críticas contundentes a ‘Barbie’: Filme é ‘enfadonho, ódio de homens e uma mentira zumbi’, segundo o apresentador</a></h3>
             </div>
+            <div class="card">
+                <a href="#"><img src="./images/content3.webp" alt="banner" loading="lazy"></a>
+                <h3><a href="#">Maher não segura a língua! Críticas contundentes a ‘Barbie’: Filme é ‘enfadonho, ódio de homens e uma mentira zumbi’, segundo o apresentador</a></h3>
+            </div>
         </div>
     </section>
-    <section>
+    <section class="full-width">
         <div class="contet-ads">
             <a href="#"><img src="./images/diletec-ads-mobile.webp" alt="banner" loading="lazy"></a>
         </div>
     </section>
-    <section>
+    <section class="full-width">
         <div class="content-category">
             <h3 class="category-title"><a href="#games">Games</a></h3>
 
@@ -73,11 +77,12 @@
                     <a href="https://www.unicorniohater.com.br/"><img src="./images/content3.webp" alt="banner" loading="lazy"></a>
                     <h3><a href="#">Maher não segura a língua! Críticas contundentes a ‘Barbie’: Filme é ‘enfadonho, ódio de homens e uma mentira zumbi’, segundo o apresentador</a></h3>
                 </div>
+              
             </div>
         </div>
     </section>
     
-    <section>
+    <section class="full-width">
         <div class="content-news latest-news-offset">
             <div class="card">
                 <a href="#"><img src="./images/content1.webp" alt="banner" loading="lazy"></a>
@@ -99,57 +104,47 @@
         </div>
     </section>
 
-    <script>
-    
-    function makeElementDraggable(containerId) {
-    const container = document.getElementById(containerId);
-    let isDragging = false;
-    let startPosX = 0;
-    let scrollLeft = 0;
-    let scrollTimeout = null;
+    <footer>
+        
+    <h2>Unicórnio Hater</h2>
+    <div class="footer-desc">
+        <div class="footer-desc-logo">
+            <a href="#"><img src="./images/logo.webp" alt="logo" loading="lazy"></a>
+            <div class="footer-desc-text">
+                Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.
+            </div>
+        </div>
+      
+    </div>
+    <div class="footer-links">
+        <div class="footer-links-item">
+            <h3 id="menuTitle1">Links <span class="icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span></h3>
+            <ul class="nav-footer" id="menu1">
+                <li class="nav-item"><a href="#" class="link">Home</a></li>
+                <li class="nav-item"><a href="#" class="link">Services</a></li>
+                <li class="nav-item"><a href="#" class="link">Our Works</a></li>
+                <li class="nav-item"><a href="#" class="link">About</a></li>
+                <li class="nav-item"><a href="#" class="link">Blog</a></li>
+            </ul>
+        </div>
 
-    container.addEventListener("mousedown", (e) => {
-        isDragging = true;
-        startPosX = e.clientX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
-    });
+        <div class="footer-links-item">
+            <h3 id="menuTitle2">Redes Sociais<span class="icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span></h3>
+            <ul class="nav-footer" id="menu2">
+                <li class="nav-item"><a href="#" class="link">Home</a></li>
+                <li class="nav-item"><a href="#" class="link">Services</a></li>
+                <li class="nav-item"><a href="#" class="link">Our Works</a></li>
+                <li class="nav-item"><a href="#" class="link">About</a></li>
+                <li class="nav-item"><a href="#" class="link">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="text-copyright">©UnicórnioHater 2023</div>
+    </footer>
 
-    container.addEventListener("mouseup", (e) => {
-        if (isDragging) {
-            isDragging = false;
-            container.style.cursor = "grab";
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                container.classList.remove('no-click');
-            }, 100);
-        }
-    });
 
-    container.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        container.style.cursor = "grabbing";
-        const x = e.clientX - container.offsetLeft;
-        const walk = (x - startPosX) * 1;
-        container.scrollLeft = scrollLeft - walk;
-        e.preventDefault();
-        e.stopPropagation();
-        clearTimeout(scrollTimeout);
-        container.classList.add('no-click');
-    });
-
-    container.addEventListener("click", (e) => {
-        if (container.classList.contains('no-click')) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    });
-}
-
-makeElementDraggable("featured-category"); 
-
-    </script>
-
+    <script src="./js/main-theme.js"></script>
+  
 
 
 </body>
