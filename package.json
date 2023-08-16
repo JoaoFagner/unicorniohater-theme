@@ -1,0 +1,16 @@
+{
+  "name": "seu-projeto",
+  "version": "1.0.0",
+  "description": "Descrição do seu projeto",
+  "scripts": {
+    "start": "comando-para-iniciar",
+    "test": "comando-para-teste",
+    "watch": "node-sass sass/index.scss css/style.css --watch",
+    "sass": "node-sass sass/index.scss css/style.css",
+    "build": "node-sass sass/index.scss css/style.css && cleancss -o css/style.min.css css/style.css"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "clean-css-cli": "^5.3.0"
+  }
+}
