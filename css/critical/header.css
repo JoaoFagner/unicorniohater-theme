@@ -1,0 +1,165 @@
+header {
+  border-top: 0.5rem solid transparent;
+  border-image: linear-gradient(to right, #F15A5A, #F0C419, #4EBA6F, #2D95BF, #955BA5);
+  border-image-slice: 1;
+  animation: gradientBorderAnimation 5s ease infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+header .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .container .topbar-right .search-icon {
+  width: 22px;
+  height: 22px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+header .main-logo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+header .main-logo img {
+  max-width: 150px;
+  width: 100%;
+  margin: 1rem auto 0rem auto;
+  object-fit: cover;
+}
+
+header nav.main-nav.sticky {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+}
+
+header .main-nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 1rem 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+header .main-nav ul li {
+  display: inline;
+  background: #51ab5b;
+  border-radius: 0.188rem;
+  padding: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+header .main-nav ul li:nth-child(1) {
+  background: #0595a2;
+}
+
+header .main-nav ul li:nth-child(2) {
+  background: #01904b;
+}
+
+header .main-nav ul li:nth-child(3) {
+  background: #b7cc3d;
+}
+
+header .main-nav ul li:nth-child(4) {
+  background: #facc33;
+}
+
+header .main-nav ul li:nth-child(5) {
+  background: #fa845c;
+}
+
+header .main-nav ul li:nth-child(6) {
+  background: #29d4b4;
+}
+
+header .main-nav ul li:first-child {
+  margin-left: 0;
+}
+
+header .main-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-family: "NotoSans-Medium", sans-serif;
+}
+
+header li.active {
+  filter: saturate(3);
+}
+
+@media screen and (max-width: 767px) {
+  header .main-logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  header .main-logo img {
+    max-width: 150px;
+    width: 100%;
+    margin: 1rem auto 0rem auto;
+    object-fit: cover;
+  }
+  header nav.main-nav.sticky {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+  }
+  header .main-nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 1rem 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  header .main-nav ul li {
+    display: inline;
+    background: #51ab5b;
+    border-radius: 0.188rem;
+    padding: 0.8rem;
+    margin-left: 0.5rem;
+  }
+  header .main-nav ul li:nth-child(1) {
+    background: #0595a2;
+  }
+  header .main-nav ul li:nth-child(2) {
+    background: #01904b;
+  }
+  header .main-nav ul li:nth-child(3) {
+    background: #b7cc3d;
+  }
+  header .main-nav ul li:nth-child(4) {
+    background: #facc33;
+  }
+  header .main-nav ul li:nth-child(5) {
+    background: #fa845c;
+  }
+  header .main-nav ul li:nth-child(6) {
+    background: #29d4b4;
+  }
+  header .main-nav ul li:first-child {
+    margin-left: 0;
+  }
+  header .main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "NotoSans-Medium", sans-serif;
+  }
+  header li.active {
+    filter: saturate(3);
+  }
+}

@@ -1,0 +1,211 @@
+footer {
+  padding-top: 1rem;
+  background: #0b0f19;
+  color: white;
+}
+
+footer h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "NotoSans-Bold", sans-serif;
+  text-transform: uppercase;
+  line-height: 3.5rem;
+  padding: 1rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: neon6 1.5s ease-in-out infinite alternate;
+}
+
+footer .footer-desc-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+footer .footer-desc-logo > a {
+  text-decoration: none;
+}
+
+footer .footer-desc-logo > a > img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #7952b3;
+  background: linear-gradient(to right, rgba(253, 29, 29, 0.8) 50%, #fcb045);
+}
+
+footer .footer-desc-text {
+  font-family: "NotoSans-Regular", sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.2rem;
+  padding: 1rem;
+  width: 30rem;
+}
+
+footer .footer-links {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .footer-links-item {
+  margin-bottom: 1rem;
+}
+
+footer .footer-links-item h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "NotoSans-SemiBold", sans-serif;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+footer .footer-links-item .icon-chevron {
+  margin-top: 1rem;
+}
+
+footer .footer-links-item .icon-chevron > svg {
+  color: white;
+  fill: white;
+  width: 0.5rem;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-left: 0.5rem;
+  position: relative;
+  top: 0;
+}
+
+footer .nav-footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: none;
+}
+
+footer .nav-footer li {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+}
+
+footer .nav-footer li > a {
+  text-decoration: none;
+  color: white;
+  font-family: "NotoSans-Regular", sans-serif;
+}
+
+footer .nav-footer.show-menu {
+  display: block;
+}
+
+footer .text-copyright {
+  font-family: "NotoSans-Regular", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: black;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    overflow: hidden;
+    padding-top: 1rem;
+    background: #0b0f19;
+    color: white;
+  }
+  footer h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "NotoSans-Bold", sans-serif;
+    text-transform: uppercase;
+    line-height: 3.5rem;
+    padding: 1rem;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: neon6 1.5s ease-in-out infinite alternate;
+  }
+  footer .footer-desc-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  footer .footer-desc-logo > a {
+    text-decoration: none;
+  }
+  footer .footer-desc-logo > a > img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7952b3;
+    background: linear-gradient(to right, rgba(253, 29, 29, 0.8) 50%, #fcb045);
+  }
+  footer .footer-desc-text {
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.2rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  footer .footer-links {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  footer .footer-links-item {
+    margin-bottom: 1rem;
+  }
+  footer .footer-links-item h3 {
+    text-align: center;
+    font-size: 1rem;
+    font-family: "NotoSans-SemiBold", sans-serif;
+    padding-bottom: 0.5rem;
+  }
+  footer .footer-links-item .icon-chevron {
+    margin-top: 1rem;
+  }
+  footer .footer-links-item .icon-chevron > svg {
+    color: white;
+    fill: white;
+    width: 0.5rem;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0;
+  }
+  footer .nav-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+  footer .nav-footer li {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+  footer .nav-footer li > a {
+    text-decoration: none;
+    color: white;
+    font-family: "NotoSans-Regular", sans-serif;
+  }
+  footer .nav-footer.show-menu {
+    display: block;
+  }
+  footer .text-copyright {
+    font-family: "NotoSans-Regular", sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: black;
+  }
+}
