@@ -110,11 +110,12 @@ body {
   height: 100%;
 }
 
-html * {
+html *, :root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
   font-smoothing: antialiased;
+  font-display: swap;
 }
 ol,
 ul {
