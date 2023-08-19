@@ -1,0 +1,55 @@
+@import '../variables/variables.scss';
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientBorderAnimation {
+    0%,
+    100% {
+        border-image-source: linear-gradient(to right, $flat1, $flat2, $flat3, $flat4, $flat5);
+    }
+
+    25% {
+        border-image-source: linear-gradient(to right, $flat2, $flat1, $flat3, $flat4, $flat5);
+    }
+    50% {
+        border-image-source: linear-gradient(to right, $flat2, $flat3, $flat1, $flat4, $flat5);
+    }
+    75% {
+        border-image-source: linear-gradient(to right, $flat2, $flat3, $flat4, $flat1, $flat5);
+    }
+}
+
+@keyframes neon6 {
+    from {
+        text-shadow:
+            0 0 5px #fff,
+            0 0 20px #fff,
+            0 0 30px #fff,
+            0 0 40px #ff00de,
+            0 0 70px #ff00de,
+            0 0 80px #ff00de,
+            0 0 100px #ff00de,
+            0 0 150px #ff00de;
+    }
+    to {
+        text-shadow:
+            0 0 0px #fff,
+            0 0 10px #fff,
+            0 0 15px #fff,
+            0 0 20px #ff00de,
+            0 0 35px #ff00de,
+            0 0 40px #ff00de,
+            0 0 50px #ff00de,
+            0 0 75px #ff00de;
+    }
+}

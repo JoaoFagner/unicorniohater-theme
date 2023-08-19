@@ -1,0 +1,285 @@
+@import './variables/variables.scss';
+
+.content-news {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    height: 100%;
+    padding: 1rem;
+    img {
+        border-radius: 0.5rem;
+    }
+    > .card {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        > a {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background: #00000012;
+                width: 100%;
+                height: 100%;
+                transition: filter 0.3s ease-in-out;
+                border-radius: 0.5rem;
+            }
+
+            > h3 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: $white;
+                font-family: $NotosansBold;
+                line-height: 1.8rem;
+                font-size: 1.5rem;
+                padding: 1rem 1rem;
+                span {
+                    background: -webkit-gradient(linear, left top, right top, from(currentColor), to(currentColor));
+                    background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+                    background-size: 0px 6%;
+                    background-repeat: no-repeat;
+                    background-position: left 100%;
+                    -webkit-transition-duration: 0.6s;
+                    transition-duration: 0.6s;
+                    font-weight: inherit;
+                    color: $white;
+                }
+            }
+        }
+        &:hover {
+            > a {
+                &::after {
+                    background: transparent;
+                    filter: saturate(1);
+                }
+
+                > h3 {
+                    span {
+                        background-size: 100% 6%;
+                    }
+                }
+            }
+            > h3 {
+                a {
+                    background-size: 100% 6%;
+                }
+            }
+        }
+        &:nth-child(1) {
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-row-end: 3;
+            grid-column-end: 2;
+            min-width: 35vw;
+            height: 100%;
+            > a {
+                > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &:nth-child(2) {
+            grid-row-start: 1;
+            grid-column-start: 2;
+            grid-row-end: 2;
+            grid-column-end: 4;
+            width: 100%;
+            height: 264px;
+            > a {
+                > img {
+                    width: 100%;
+                    min-width: 268px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                > h3 {
+                    line-height: 1.3rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+        &:nth-child(3) {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            grid-row-end: 3;
+            grid-column-end: 3;
+            width: 100%;
+            height: 264px;
+            > a {
+                > img {
+                    width: 100%;
+                    height: 264px;
+                    object-fit: cover;
+                }
+
+                > h3 {
+                    line-height: 1.3rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+        &:nth-child(4) {
+            grid-row-start: 2;
+            grid-column-start: 3;
+            grid-row-end: 3;
+            grid-column-end: 3;
+            width: 100%;
+            height: 264px;
+            > a {
+                > img {
+                    width: 100%;
+                    height: 264px;
+                    object-fit: cover;
+                }
+
+                > h3 {
+                    line-height: 1.3rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+        > h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: $white;
+            font-family: $NotosansBold;
+            line-height: 1.3rem;
+            padding: 1rem 1rem;
+            a {
+                background: -webkit-gradient(linear, left top, right top, from(currentColor), to(currentColor));
+                background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+                background-size: 0px 6%;
+                background-repeat: no-repeat;
+                background-position: left 100%;
+                -webkit-transition-duration: 0.6s;
+                transition-duration: 0.6s;
+                font-weight: inherit;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .content-news {
+        width: 100%;
+        display: contents;
+        img {
+            border-radius: 0;
+        }
+        > .card {
+            width: 100%;
+            > a {
+                flex-direction: column;
+                &::after {
+                    border-radius: 0;
+                    background: none;
+                    opacity: 1;
+                }
+                > h3 {
+                    position: relative;
+                    font-size: 1rem;
+                    line-height: 1.3rem;
+                    > span {
+                        color: $dark5;
+                    }
+                }
+            }
+            &:nth-child(1) {
+                grid-row-start: auto;
+                grid-column-start: auto;
+                grid-row-end: auto;
+                grid-column-end: auto;
+                height: auto;
+                width: 100%;
+                > a {
+                    > img {
+                        max-width: 100%;
+                        width: 100%;
+                        height: 12.5rem;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                grid-row-start: auto;
+                grid-column-start: auto;
+                grid-row-end: auto;
+                grid-column-end: auto;
+                height: auto;
+                width: 100%;
+                > a {
+                    > img {
+                        max-width: 100%;
+                        width: 100%;
+                        height: 12.5rem;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                grid-row-start: auto;
+                grid-column-start: auto;
+                grid-row-end: auto;
+                grid-column-end: auto;
+                height: auto;
+                width: 100%;
+                > a {
+                    > img {
+                        max-width: 100%;
+                        width: 100%;
+                        height: 12.5rem;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                grid-row-start: auto;
+                grid-column-start: auto;
+                grid-row-end: auto;
+                grid-column-end: auto;
+                height: auto;
+                width: 100%;
+                > a {
+                    > img {
+                        max-width: 100%;
+                        width: 100%;
+                        height: 12.5rem;
+                    }
+                }
+            }
+            > h3 {
+                font-size: 1rem;
+                color: $black;
+                font-family: $NotosansMedium;
+                padding: 1rem 1rem;
+                position: initial;
+                > a {
+                    color: $black;
+                }
+            }
+            > a {
+                position: relative;
+            }
+        }
+        .card {
+            img {
+                max-width: 100%;
+                width: 100%;
+                height: 12.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .content-news {
+        gap: 5px;
+    }
+}

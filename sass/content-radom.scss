@@ -1,0 +1,99 @@
+@import './variables/variables.scss';
+
+.content-random {
+    display: flex;
+    .card-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    .card-grid {
+        .card {
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+            h3 {
+                padding: 1rem 0;
+                font-family: $NotosansSemiBold;
+                color: $dark;
+                > a {
+                    color: $dark;
+                    line-height: 1.3rem;
+                    background: -webkit-gradient(linear, left top, right top, from(currentColor), to(currentColor));
+                    background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+                    background-size: 0px 6%;
+                    background-repeat: no-repeat;
+                    background-position: left 100%;
+                    -webkit-transition-duration: 0.6s;
+                    transition-duration: 0.6s;
+                    font-weight: inherit;
+                    &:hover {
+                        background-size: 100% 6%;
+                    }
+                }
+            }
+            > .inner-card {
+                padding-left: 1rem;
+            }
+            > a {
+                > img {
+                    object-fit: cover;
+                    width: 198px;
+                    height: 134px;
+                    border-radius: 0.5rem;
+                    transition: filter 0.3s ease-in-out;
+                    &:hover {
+                        filter: saturate(3.5);
+                    }
+                }
+            }
+        }
+        > .inner-card {
+            display: flex;
+        }
+    }
+    a.category-badge {
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-family: $NotosansRegular;
+        transition: filter 0.3s ease-in-out;
+    }
+    .category-badge {
+        &:hover {
+            filter: saturate(3);
+        }
+    }
+    .circle {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 100%;
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+    .category-badge.animes {
+        background: pink;
+        color: $red;
+    }
+    .animes {
+        .circle {
+            background: rgb(230, 0, 38);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .content-random {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .content-random {
+        flex-direction: column;
+    }
+}

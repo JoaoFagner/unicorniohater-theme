@@ -1,0 +1,171 @@
+@import './variables/variables.scss';
+
+.content-category {
+    background-image: linear-gradient(
+        to right,
+        rgba(131, 58, 180, 1) 25%,
+        rgba(253, 29, 29, 0.8) 50%,
+        rgba(252, 176, 69, 1)
+    );
+    background-size: 1000% 100%;
+    animation: gradientAnimation 20s ease infinite;
+    padding: 0.8rem 0;
+    .category-title {
+        font-family: $NotosansMedium;
+        padding: 0 1rem;
+        a {
+            color: $white;
+            font-size: 2rem;
+        }
+    }
+}
+.featured-category {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100%;
+    .card {
+        position: relative;
+        margin-left: 1rem;
+        padding-right: 0;
+        width: 254px;
+        height: 400px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 0.313rem;
+        transition: transform 0.3s ease-in-out;
+        &:first-child {
+            margin-left: 0;
+            padding-right: 0;
+        }
+        > a {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                background: rgb(63, 94, 251);
+                background: linear-gradient(360deg, rgba(63, 94, 251, 0.5) 0%, rgba(252, 70, 107, 0.5) 100%);
+                width: 100%;
+                height: 100%;
+                border-radius: 0.313rem;
+                transition: filter 0.3s ease-in-out;
+            }
+        }
+        &:hover {
+            > a {
+                &::after {
+                    background: transparent;
+                    filter: saturate(2);
+                }
+            }
+        }
+        > h3 {
+            position: absolute;
+            bottom: 0;
+            padding: 0.5rem;
+            > a {
+                color: $white;
+                font-family: $NotosansRegular;
+                font-size: 1rem;
+                line-height: 1.2rem;
+                text-shadow: 1px 1px 1px rgb(0, 0, 0);
+                display: block;
+            }
+        }
+        img {
+            width: 254px;
+            height: 400px;
+            border-radius: 0.313rem;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .content-category {
+        background-image: linear-gradient(
+            to right,
+            rgba(131, 58, 180, 1) 25%,
+            rgba(253, 29, 29, 0.8) 50%,
+            rgba(252, 176, 69, 1)
+        );
+        background-size: 1000% 100%;
+        animation: gradientAnimation 20s ease infinite;
+        padding: 0.8rem 0;
+        .category-title {
+            font-family: $NotosansMedium;
+            padding: 0 1rem;
+            a {
+                color: $white;
+                font-size: 2rem;
+            }
+        }
+    }
+    .featured-category {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 19.688rem;
+        .card {
+            position: relative;
+            margin-left: 1rem;
+            padding-right: 0;
+            width: 180px;
+            height: 290px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            border-radius: 0.313rem;
+            transition: transform 0.3s ease-in-out;
+            &:first-child {
+                margin-left: 0;
+                padding-right: 0;
+            }
+            > a {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: rgb(63, 94, 251);
+                    background: linear-gradient(360deg, rgba(63, 94, 251, 0.5) 0%, rgba(252, 70, 107, 0.5) 100%);
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0.313rem;
+                }
+            }
+            > h3 {
+                position: absolute;
+                bottom: 0;
+                padding: 0.5rem;
+                > a {
+                    color: $white;
+                    font-family: $NotosansRegular;
+                    font-size: 1rem;
+                    line-height: 1.2rem;
+                    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+                }
+            }
+            img {
+                width: 180px;
+                height: 290px;
+                border-radius: 0.313rem;
+                object-fit: cover;
+            }
+        }
+    }
+}

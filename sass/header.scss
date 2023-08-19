@@ -1,0 +1,162 @@
+@import './variables/variables.scss';
+
+header {
+    border-top: 0.5rem solid transparent;
+    border-image: linear-gradient(to right, $flat1, $flat2, $flat3, $flat4, $flat5);
+    border-image-slice: 1;
+    animation: gradientBorderAnimation 5s ease infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        .topbar-right {
+            .search-icon {
+                width: 22px;
+                height: 22px;
+                padding: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .main-logo {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-width: 150px;
+            width: 100%;
+            margin: 1rem auto 0rem auto;
+            object-fit: cover;
+        }
+    }
+
+    nav.main-nav.sticky {
+        background-color: $bgWhite;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9;
+    }
+
+    .main-nav {
+        ul {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            overflow-x: auto;
+            padding: 1rem 1rem;
+            -webkit-overflow-scrolling: touch;
+            li {
+                display: inline;
+                background: #51ab5b;
+                border-radius: 0.188rem;
+                padding: 0.8rem;
+                margin-left: 0.5rem;
+                &:nth-child(1) {
+                    background: #0595a2;
+                }
+                &:nth-child(2) {
+                    background: #01904b;
+                }
+                &:nth-child(3) {
+                    background: #b7cc3d;
+                }
+                &:nth-child(4) {
+                    background: #facc33;
+                }
+                &:nth-child(5) {
+                    background: #fa845c;
+                }
+                &:nth-child(6) {
+                    background: #29d4b4;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 1rem;
+                    font-family: $NotosansMedium;
+                }
+            }
+        }
+    }
+    li.active {
+        filter: saturate(3);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        .main-logo {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 150px;
+                width: 100%;
+                margin: 1rem auto 0rem auto;
+                object-fit: cover;
+            }
+        }
+        nav.main-nav.sticky {
+            background-color: $bgWhite;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9;
+        }
+        .main-nav {
+            ul {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding: 1rem 1rem;
+                -webkit-overflow-scrolling: touch;
+                li {
+                    display: inline;
+                    background: #51ab5b;
+                    border-radius: 0.188rem;
+                    padding: 0.8rem;
+                    margin-left: 0.5rem;
+                    &:nth-child(1) {
+                        background: #0595a2;
+                    }
+                    &:nth-child(2) {
+                        background: #01904b;
+                    }
+                    &:nth-child(3) {
+                        background: #b7cc3d;
+                    }
+                    &:nth-child(4) {
+                        background: #facc33;
+                    }
+                    &:nth-child(5) {
+                        background: #fa845c;
+                    }
+                    &:nth-child(6) {
+                        background: #29d4b4;
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 1rem;
+                        font-family: $NotosansMedium;
+                    }
+                }
+            }
+        }
+        li.active {
+            filter: saturate(3);
+        }
+    }
+}
