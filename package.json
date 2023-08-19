@@ -7,7 +7,10 @@
     "test": "comando-para-teste",
     "watch": "node-sass sass/index.scss css/style.css --watch",
     "sass": "node-sass sass/index.scss css/style.css",
-    "build": "node-sass sass/index.scss css/style.css && cleancss -o css/style.min.css css/style.css"
+    "build": "node-sass sass/index.scss css/style.css && cleancss -o css/style.min.css css/style.css",
+    "build:critical:header": "node-sass sass/header.scss css/critical/header.css --output-style expanded && cleancss -o css/critical/header.min.css css/critical/header.css",
+    "build:critical:footer": "node-sass sass/footer.scss css/critical/footer.css --output-style expanded && cleancss -o css/critical/footer.min.css css/critical/footer.css",
+    "build:critical": "npm run build:critical:header && npm run build:critical:footer"
   },
   "dependencies": {
     "node-sass": "^9.0.0",
