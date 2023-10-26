@@ -10,6 +10,7 @@ header {
     .container {
         display: flex;
         justify-content: flex-end;
+        max-width: 90rem;
         .topbar-right {
             .search-icon {
                 width: 22px;
@@ -51,31 +52,32 @@ header {
             -webkit-overflow-scrolling: touch;
             li {
                 display: inline;
-                background: #51ab5b;
+                background: $black;
                 border-radius: 0.188rem;
                 padding: 0.8rem;
                 margin-left: 0.5rem;
-                &:nth-child(1) {
-                    background: #0595a2;
-                }
-                &:nth-child(2) {
-                    background: #01904b;
-                }
-                &:nth-child(3) {
-                    background: #b7cc3d;
-                }
-                &:nth-child(4) {
-                    background: #facc33;
-                }
-                &:nth-child(5) {
-                    background: #fa845c;
-                }
-                &:nth-child(6) {
-                    background: #29d4b4;
-                }
-                &:first-child {
-                    margin-left: 0;
-                }
+                font-weight: bolder;
+                // &:nth-child(1) {
+                //     background: #0595a2;
+                // }
+                // &:nth-child(2) {
+                //     background: #01904b;
+                // }
+                // &:nth-child(3) {
+                //     background: #b7cc3d;
+                // }
+                // &:nth-child(4) {
+                //     background: #facc33;
+                // }
+                // &:nth-child(5) {
+                //     background: #fa845c;
+                // }
+                // &:nth-child(6) {
+                //     background: #29d4b4;
+                // }
+                // &:first-child {
+                //     margin-left: 0;
+                // }
                 a {
                     text-decoration: none;
                     color: $white;
@@ -121,31 +123,9 @@ header {
                 -webkit-overflow-scrolling: touch;
                 li {
                     display: inline;
-                    background: #51ab5b;
                     border-radius: 0.188rem;
                     padding: 0.8rem;
                     margin-left: 0.5rem;
-                    &:nth-child(1) {
-                        background: #0595a2;
-                    }
-                    &:nth-child(2) {
-                        background: #01904b;
-                    }
-                    &:nth-child(3) {
-                        background: #b7cc3d;
-                    }
-                    &:nth-child(4) {
-                        background: #facc33;
-                    }
-                    &:nth-child(5) {
-                        background: #fa845c;
-                    }
-                    &:nth-child(6) {
-                        background: #29d4b4;
-                    }
-                    &:first-child {
-                        margin-left: 0;
-                    }
                     a {
                         text-decoration: none;
                         color: $white;

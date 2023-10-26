@@ -18,6 +18,7 @@
                 padding: 1rem 0;
                 font-family: $NotosansSemiBold;
                 color: $dark;
+                font-size: 1.2rem;
                 > a {
                     color: $dark;
                     line-height: 1.3rem;
@@ -31,17 +32,27 @@
                     font-weight: inherit;
                     &:hover {
                         background-size: 100% 6%;
+                        color: $flat6;
                     }
                 }
+              
             }
+          
             > .inner-card {
                 padding-left: 1rem;
+                > time {
+                    font-family: 'Courier New', monospace;
+                    font-weight: normal;
+                    font-size: 0.9rem;
+                    display: block;
+                    color: $black;
+                }
             }
             > a {
                 > img {
                     object-fit: cover;
-                    width: 198px;
-                    height: 134px;
+                    width: 12.375rem;
+                    height: 8.375rem;
                     border-radius: 0.5rem;
                     transition: filter 0.3s ease-in-out;
                     &:hover {
@@ -58,7 +69,7 @@
         text-decoration: none;
         padding: 0.3rem 1rem;
         border-radius: 5px;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-family: $NotosansRegular;
         transition: filter 0.3s ease-in-out;
     }
@@ -73,14 +84,16 @@
         border-radius: 100%;
         display: inline-block;
         margin-right: 0.5rem;
+        margin-bottom: 0.05rem;
     }
     .category-badge.animes {
-        background: pink;
-        color: $red;
+        background: #e6f4f9;
+        color: #000000;
+        font-weight: normal;
     }
     .animes {
         .circle {
-            background: rgb(230, 0, 38);
+            background: #01904b;
         }
     }
 }
@@ -89,6 +102,16 @@
     .content-random {
         display: flex;
         flex-direction: column;
+        .card-grid {
+            .card {
+                > a {
+                    img {
+                        width: 9.063rem;
+                        height: 11.25rem;
+                    }
+                }
+            }
+        }
     }
 }
 

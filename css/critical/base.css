@@ -28,10 +28,24 @@
 
 @keyframes neon6 {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    text-shadow: 0 0 5px #fff,
+ 0 0 20px #fff,
+ 0 0 30px #fff,
+ 0 0 40px #ff00de,
+ 0 0 70px #ff00de,
+ 0 0 80px #ff00de,
+ 0 0 100px #ff00de,
+ 0 0 150px #ff00de;
   }
   to {
-    text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    text-shadow: 0 0 0px #fff,
+ 0 0 10px #fff,
+ 0 0 15px #fff,
+ 0 0 20px #ff00de,
+ 0 0 35px #ff00de,
+ 0 0 40px #ff00de,
+ 0 0 50px #ff00de,
+ 0 0 75px #ff00de;
   }
 }
 
@@ -247,13 +261,13 @@ section {
 }
 
 .full-with-sidebar {
-  width: 70%;
+  width: 100%;
   float: left;
 }
 
 .right-sidebar {
   top: 6rem;
-  width: 28%;
+  width: 70%;
   float: left;
   position: sticky;
 }
